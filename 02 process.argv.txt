@@ -1,0 +1,20 @@
+process.argv is an array containing the command line arguments.
+
+arr[0] is "node"
+arr[1] is the path to the .js file
+indexes 2 and up contain the arguments we provide
+
+so if file 02babysteps.js contains:
+
+process.argv.forEach(function (argument, index) {
+  console.log(index + ': ' + argument);
+});
+
+then entering "$ node 02babysteps.js first 2 3rd true" logs:
+
+0:/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node
+1: /home/ubuntu/workspace/02babysteps.js
+2: first
+3: 2
+4: 3rd
+5: true
